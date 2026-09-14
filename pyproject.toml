@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "ml-learning-lab"
+version = "0.1.0"
+description = "Step-by-step machine learning learning lab based on the machine learning roadmap."
+authors = ["ML Learning Lab"]
+readme = "README.md"
+packages = [{include = "ml_learning", from = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.14"
+numpy = "^2.3"
+pandas = "^2.3"
+matplotlib = "^3.10"
+seaborn = "^0.13"
+scipy = "^1.16"
+scikit-learn = "^1.7"
+jupyterlab = "^4.4"
+ipykernel = "^6.30"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+extend-exclude = [".ipynb_checkpoints"]
+
+[tool.ruff.lint]
+# Ruff's default correctness rules, plus import sorting.
+select = ["E4", "E7", "E9", "F", "I"]
+
+[tool.ruff.lint.per-file-ignores]
+# Teaching notebooks often import packages for later interactive experiments.
+"*.ipynb" = ["F401"]
+
+[dependency-groups]
+dev = [
+    "ruff (>=0.16.6,<0.17.0)"
+]

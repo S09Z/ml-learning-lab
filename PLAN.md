@@ -30,9 +30,12 @@ cell) — if the two ever disagree, trust the script and fix this file.
 | [#3](https://github.com/S09Z/ml-learning-lab/pull/3) | `claude/eigenvalues_and_svd` | `main` | 🔵 Draft PR open |
 | [#4](https://github.com/S09Z/ml-learning-lab/pull/4) | `claude/matrix-operations` | `claude/eigenvalues_and_svd` (#3) | 🔵 Draft PR open |
 | [#5](https://github.com/S09Z/ml-learning-lab/pull/5) | `claude/gradients-intuition` | `claude/matrix-operations` (#4) | 🔵 Draft PR open |
+| [#6](https://github.com/S09Z/ml-learning-lab/pull/6) | `claude/plan-tracking` | `main` | 🔵 Draft PR open |
+| [#7](https://github.com/S09Z/ml-learning-lab/pull/7) | `claude/linear-regression-numpy` | `claude/gradients-intuition` (#5) | 🔵 Draft PR open |
 
-Stack order: `main` ← #2, and separately `main` ← #3 ← #4 ← #5. As each PR merges, retarget the
-next one in its chain to `main` (`gh pr edit <n> --base main`) before continuing the stack.
+Stack order: `main` ← #2, `main` ← #6, and separately `main` ← #3 ← #4 ← #5 ← #7 (completes
+Phase 01). As each PR merges, retarget the next one in its chain to `main`
+(`gh pr edit <n> --base main`) before continuing the stack.
 
 > **Note:** `notebooks/00_python/01_algorithm_example.ipynb` is filled in but sits uncommitted,
 > pre-dates this plan, isn't on `main`, and doesn't follow the Thai-lesson house style (it's an
@@ -58,7 +61,7 @@ next one in its chain to `main` (`gh pr edit <n> --base main`) before continuing
 | `01_numpy_linear_algebra/02_matrix_operations.ipynb` | Determinant, inverse, Gaussian elimination, trace, matrix norms | 🔵 #4 |
 | `01_numpy_linear_algebra/03_eigenvalues_and_svd.ipynb` | Eigenvalues/eigenvectors, diagonalization, SVD | 🔵 #3 |
 | `01_numpy_linear_algebra/04_gradients_intuition.ipynb` | Derivatives, partial derivatives, gradient vector, gradient descent | 🔵 #5 |
-| `01_numpy_linear_algebra/05_linear_regression_numpy.ipynb` | Linear regression via gradient descent, full from-scratch model | ⬜ Not started (next up) |
+| `01_numpy_linear_algebra/05_linear_regression_numpy.ipynb` | Linear regression capstone: closed-form + gradient descent, Hessian diagonalization/condition number | 🔵 #7 |
 
 ## Phase 02 — Statistics
 
@@ -205,6 +208,6 @@ next one in its chain to `main` (`gh pr edit <n> --base main`) before continuing
 ## Progress
 
 - Merged: 1 / 72
-- Draft PR open: 4 / 72
-- Not started: 66 / 72
+- Draft PR open: 5 / 72 (Phase 01 fully covered by open Draft PRs #2-#5, #7)
+- Not started: 65 / 72
 - Out of scope (see note): 1 / 72

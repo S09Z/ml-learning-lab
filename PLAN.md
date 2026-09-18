@@ -32,10 +32,12 @@ cell) — if the two ever disagree, trust the script and fix this file.
 | [#5](https://github.com/S09Z/ml-learning-lab/pull/5) | `claude/gradients-intuition` | `claude/matrix-operations` (#4) | 🔵 Draft PR open |
 | [#6](https://github.com/S09Z/ml-learning-lab/pull/6) | `claude/plan-tracking` | `main` | 🔵 Draft PR open |
 | [#7](https://github.com/S09Z/ml-learning-lab/pull/7) | `claude/linear-regression-numpy` | `claude/gradients-intuition` (#5) | 🔵 Draft PR open |
+| [#8](https://github.com/S09Z/ml-learning-lab/pull/8) | `claude/probability-basics` | `main` | 🔵 Draft PR open |
 
-Stack order: `main` ← #2, `main` ← #6, and separately `main` ← #3 ← #4 ← #5 ← #7 (completes
-Phase 01). As each PR merges, retarget the next one in its chain to `main`
-(`gh pr edit <n> --base main`) before continuing the stack.
+Stack order: `main` ← #2, `main` ← #6, `main` ← #8, and separately `main` ← #3 ← #4 ← #5 ← #7
+(completes Phase 01). Phase 02 branches off `main` directly rather than stacking further, since
+each statistics notebook is independent of the Phase 01 chain. As each PR merges, retarget the
+next one in its chain to `main` (`gh pr edit <n> --base main`) before continuing the stack.
 
 > **Note:** `notebooks/00_python/01_algorithm_example.ipynb` is filled in but sits uncommitted,
 > pre-dates this plan, isn't on `main`, and doesn't follow the Thai-lesson house style (it's an
@@ -69,7 +71,7 @@ Phase 01). As each PR merges, retarget the next one in its chain to `main`
 
 | Notebook | Topic | Status |
 |---|---|---|
-| `02_statistics/01_probability_basics.ipynb` | Probability fundamentals, combinatorics, conditional probability | ⬜ Not started |
+| `02_statistics/01_probability_basics.ipynb` | Sample space/axioms, combinatorics, LLN/simulation, conditional probability, independence, law of total probability, discrete r.v. | 🔵 #8 |
 | `02_statistics/02_descriptive_statistics.ipynb` | Mean/median/mode, variance, std, percentiles, summary stats | ⬜ Not started |
 | `02_statistics/03_distributions.ipynb` | Common distributions (normal, binomial, Poisson, etc.), PDFs/CDFs | ⬜ Not started |
 | `02_statistics/04_bayes_theorem.ipynb` | Bayes' theorem, prior/posterior, worked examples | ⬜ Not started |
@@ -208,6 +210,6 @@ Phase 01). As each PR merges, retarget the next one in its chain to `main`
 ## Progress
 
 - Merged: 1 / 72
-- Draft PR open: 5 / 72 (Phase 01 fully covered by open Draft PRs #2-#5, #7)
-- Not started: 65 / 72
+- Draft PR open: 6 / 72 (Phase 01 fully covered by open Draft PRs #2-#5, #7)
+- Not started: 64 / 72
 - Out of scope (see note): 1 / 72
